@@ -14,6 +14,8 @@ public class Lista {
         if (this.inicio == null){
             this.inicio = node;
             this.fim = node;
+        }else{
+          this.fim = node
         }
     }
 
