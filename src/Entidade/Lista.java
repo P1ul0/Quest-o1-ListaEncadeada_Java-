@@ -15,7 +15,8 @@ public class Lista {
             this.inicio = node;
             this.fim = node;
         }else{
-          this.fim = node
+          node.setProx(this.fim);
+          this.fim = node;
         }
     }
 
