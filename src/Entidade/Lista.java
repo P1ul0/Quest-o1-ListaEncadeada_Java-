@@ -50,6 +50,7 @@ public class Lista {
             System.out.println(p.getValor().getNomeSite());
             System.out.println(p.getValor().getLinkSite());
             p = p.getProx();
+            
         }
     }
 
