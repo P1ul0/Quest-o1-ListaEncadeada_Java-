@@ -10,18 +10,22 @@ public class Site {
     }
 
     public String getNomeSite() {
+
         return nomeSite;
     }
 
     public void setNomeSite(String nomeSite) {
+
         this.nomeSite = nomeSite;
     }
 
     public String getLinkSite() {
+
         return linkSite;
     }
 
     public void setLinkSite(String linkSite) {
+
         this.linkSite = linkSite;
     }
 }

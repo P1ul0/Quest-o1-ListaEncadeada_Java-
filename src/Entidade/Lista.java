@@ -13,22 +13,34 @@ public class Lista {
         Node node = new Node(novoSite);
         if (this.inicio == null){
             this.inicio = node;
-            this.fim = node;
         }else{
-          node.setProx(this.fim);
-          this.fim = node;
+          this.fim.setProx(node);
         }
+        this.fim = node;
     }
     
     public void procurar(String nomeSite){
-      Node p = this.inicio
+      Node p = this.inicio;
+      Node ant = null;
       while(p != null){
-        if(p.getValor().getNomeSite() == nomeSite){
-          System.out.println(p.getValor().getLinkSite)
-        }else{
-          System.out.println("valor não encontrado")
-        }
-        p = p.getProx()
+          if(p.getValor().getNomeSite().equalsIgnoreCase(nomeSite)){
+              System.out.println("o site é :" + p.getValor().getLinkSite());
+              if(p.equals(this.fim)){
+                  p.setProx(this.inicio);
+                  this.inicio = p;
+                  this.fim = ant;
+                  ant.setProx(null);
+              } else if (p.equals(this.inicio)){
+                break;
+              }else {
+                  ant.setProx(p.getProx());
+                  p.setProx(this.inicio);
+                  this.inicio = p;
+              }
+              break;
+          }
+          ant = p;
+          p = p.getProx();
       }
     }
 
