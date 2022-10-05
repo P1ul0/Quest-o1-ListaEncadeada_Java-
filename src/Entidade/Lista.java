@@ -25,6 +25,8 @@ public class Lista {
       while(p != null){
         if(p.getValor().getNomeSite() == nomeSite){
           System.out.println(p.getValor().getLinkSite)
+        }else{
+          System.out.println("valor não encontrado")
         }
         p = p.getProx()
       }
