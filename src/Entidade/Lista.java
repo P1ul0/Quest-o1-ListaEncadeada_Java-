@@ -19,6 +19,16 @@ public class Lista {
           this.fim = node;
         }
     }
+    
+    public void procurar(String nomeSite){
+      Node p = this.inicio
+      while(p != null){
+        if(p.getValor().getNomeSite() == nomeSite){
+          System.out.println(p.getValor().getLinkSite)
+        }
+        p = p.getProx()
+      }
+    }
 
     public void  print(){
         Node p = this.inicio;
